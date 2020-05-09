@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+function help()
+{echo "usage:"
+ echo "-q [quality_num][dir]  "
+ echo "-r [persent][dir]"
+ echo "-w [watermark_text][dir]"
+ echo "-p [perfix_text][dir]"
+ echo "-s [suffix_text][dir]"
+ echo "-c [dir]"
+ echo "-h"
+
+
+}
+
+function jpeg_quality_compress()
+#quality compression of JPEG image
+
+{quality_num=${1}
+dir=${2}
+
+jpeg_files=($(find "${dir}" -regex '.*\.jpg))
+for jpeg_file in "${jpeg_file[@]}";
+do
+	file_name=${jpeg_file%.*}
+	file_tail=${jpeg_file} -quality ${quality_num} $file_name'_quaity.'$file_tail
+	echo $jpeg_file 'is compressed into' $file_name'_quality.'$file_tail
+done
+
+
+}
+
+function keep_radio_compress()
+#compress resolution
+{percent=${1}
+dir=${2}
+jps_files=($(find"${dir)" -regex '.*\.jpg\|.svg\|.*\.png'))
+
+for jps_file in "${jps_files[@]}";
+do
+	file_name=${jps_file%.*}
+	file_tail=${jps_file##*.}
+	convert ${jps_file} -resize ${persent}'%x'${persent}'%' $file_name'_'$persent'%.'$file_tail
+
+}
