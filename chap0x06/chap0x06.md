@@ -41,9 +41,9 @@
 
     - 删除文件、创建目录、修改文件
 
-    ![](img/rnm_del_mkd4.png)
+    ![](images/rnm_del_mkd.png)
 
-- FTP用户不能越权访问指定目录之外的任意其他目录和文件（**注意**：不是通过 绝对路径 方式来遍历，而是验证通过相对路径（如 cd ../../../../ ）方式无法翻出 FTP 服务器指定的当前用户的home 访问到 home及其所有子目录以外的任何其他目录）
+- FTP用户不能越权访问指定目录之外的任意其他目录和文件（**TIPS**：不是通过 绝对路径 方式来遍历，而是验证通过相对路径（如 cd ../../../../ ）方式无法翻出 FTP 服务器指定的当前用户的home 访问到 home及其所有子目录以外的任何其他目录）
 
     ![](images/no_out.png)
 
@@ -104,14 +104,14 @@
 
         ![](images/srv2.png)
 
-- 参考
+- 参考资料
     - [How To Set Up an NFS Mount on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04)
 
 ## Samba
 
 ### 在windows 10客户端上连接Linux上的Samba服务器
 
-- 打开资源管理器，右键“此电脑”，选择“添加一个网络位置”
+- 资源管理器-右键“此电脑”-“添加一个网络位置”
 
     ![](images/smb3.png)
 
@@ -182,7 +182,7 @@
 
         ![](images/clt3.png)
 
-- 参考
+- 参考资料
     - [Setup DHCP server on ubuntu 16.04 (Xenial Xerus) Server](http://www.ubuntugeek.com/setup-dhcp-server-on-ubuntu-16-04-xenial-xerus-server.html)
 
 ## DNS
